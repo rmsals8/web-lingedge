@@ -1,4 +1,4 @@
-![lingedge-v2 drawio (1)](https://github.com/user-attachments/assets/cb949675-8cb4-43b3-9db1-38f9a07f38f5)# LingEdge - AI Language Learning Platform 🌟
+ # LingEdge - AI Language Learning Platform 🌟
 
 **🌍 Language / 언어: [한국어](#korean) | [English](#english)**
 
