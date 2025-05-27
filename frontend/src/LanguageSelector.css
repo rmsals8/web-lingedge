@@ -1,0 +1,63 @@
+/* src/components/LanguageSelector.css */
+.language-selector {
+    margin-right: 15px;
+  }
+  
+  .language-dropdown {
+    padding: 6px 10px;
+    border: 2px solid #6A5ACD;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #6A5ACD;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 140px; /* 언어 이름이 긴 경우를 위해 최소 너비 지정 */
+  }
+  
+  .language-dropdown:hover {
+    background-color: #6A5ACD;
+    color: #FFFFFF;
+  }
+  
+  .language-dropdown option {
+    background-color: white;
+    color: #333;
+  }
+  
+  /* RTL(Right-to-Left) 언어 지원 */
+  [dir="rtl"] {
+    text-align: right;
+  }
+  
+  /* 언어별 특수 스타일 */
+  html[lang="ar"] {
+    direction: rtl;
+    font-family: 'Amiri', 'Noto Sans Arabic', serif;
+  }
+  
+  html[lang="th"] {
+    font-family: 'Noto Sans Thai', 'Sarabun', sans-serif;
+    line-height: 1.6;
+  }
+  
+  html[lang="ko"] {
+    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  }
+  
+  html[lang="zh"] {
+    font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  }
+  
+  html[lang="ja"] {
+    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+  }
+  
+  /* 모바일 최적화 */
+  @media (max-width: 768px) {
+    .language-selector {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }

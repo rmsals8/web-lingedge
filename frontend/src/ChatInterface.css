@@ -1,0 +1,643 @@
+.chat-interface {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #34495e;
+  font-weight: bold;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-tertiary {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.response-container {
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.response-section {
+  margin-bottom: 20px;
+}
+
+.response-section h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.response-section p {
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 4px;
+  white-space: pre-wrap;
+}
+
+.loader {
+  text-align: center;
+  font-size: 24px;
+  color: #3498db;
+  margin-top: 50px;
+}
+
+.error-message {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.action-buttons {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.action-group {
+background-color: #f5f7fa;
+border-radius: 8px;
+padding: 15px;
+}
+
+.action-group h4 {
+margin-top: 0;
+margin-bottom: 10px;
+color: #333;
+font-size: 16px;
+border-bottom: 1px solid #ddd;
+padding-bottom: 8px;
+}
+
+.button-row {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+}
+
+.btn i {
+font-size: 16px;
+}
+
+.btn-primary {
+background-color: #3498db;
+color: white;
+}
+
+.btn-secondary {
+background-color: #2ecc71;
+color: white;
+}
+/* 사용자 정보 컨테이너 스타일 (중앙 정렬) */
+.user-info-container {
+text-align: center;
+margin: 20px 0;
+}
+
+.user-info {
+display: inline-block;
+background-color: #f5f7fa;
+border-radius: 8px;
+padding: 12px 20px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.usage-info {
+margin: 0;
+font-size: 18px;
+font-weight: 600;
+color: #333;
+}
+
+.usage-label {
+margin-right: 5px;
+}
+
+.usage-value {
+color: #3498db;
+font-weight: 700;
+}
+
+.user-type {
+margin: 5px 0 0 0;
+}
+
+.premium-badge {
+background-color: #f1c40f;
+color: #333;
+padding: 3px 10px;
+border-radius: 12px;
+font-size: 14px;
+font-weight: 600;
+display: inline-block;
+}
+
+.free-badge {
+background-color: #95a5a6;
+color: white;
+padding: 3px 10px;
+border-radius: 12px;
+font-size: 14px;
+font-weight: 600;
+display: inline-block;
+}
+
+/* 어휘 테이블 스타일 */
+/* ChatInterface.css에 추가/수정할 스타일 */
+
+
+
+.vocabulary-table {
+width: 100%;
+table-layout: fixed;
+margin: 0; /* 마진 제거 */
+}
+
+.vocabulary-table th,
+.vocabulary-table td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid #e0e0e0;
+}
+
+.vocabulary-table th {
+background-color: #f5f7fa;
+color: #333;
+font-weight: 600;
+font-size: 14px;
+}
+
+/* 각 열의 너비 지정하여 정렬 맞추기 */
+.vocabulary-table th:nth-child(1), 
+.vocabulary-table td:nth-child(1) {
+width: 10%;
+text-align: center;
+}
+
+.vocabulary-table th:nth-child(2), 
+.vocabulary-table td:nth-child(2) {
+width: 20%;
+}
+
+.vocabulary-table th:nth-child(3), 
+.vocabulary-table td:nth-child(3) {
+width: 30%;
+}
+
+.vocabulary-table th:nth-child(4), 
+.vocabulary-table td:nth-child(4) {
+width: 40%;
+}
+
+/* 모달 스타일 - ScriptResult.css에서 가져옴 */
+.modal-backdrop {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+/* 새로 추가된 클래스: 모달을 상단에 위치시키기 위한 클래스 */
+.modal-top-aligned {
+align-items: flex-start;
+padding-top: 50px;
+}
+
+.modal-content {
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+max-width: 500px;
+width: 90%;
+position: relative;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+position: absolute;
+top: 10px;
+right: 10px;
+background: none;
+border: none;
+font-size: 24px;
+cursor: pointer;
+color: #888;
+}
+
+.limit-modal-content h3 {
+color: #f44336;
+margin-top: 0;
+}
+
+.modal-actions {
+margin-top: 20px;
+text-align: center;
+}
+
+.modal-actions button {
+padding: 8px 16px;
+background-color: #4285f4;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.modal-actions button:hover {
+background-color: #3367d6;
+}
+
+.vocabulary-table tr:last-child td {
+border-bottom: none;
+}
+
+.vocabulary-table tr:hover {
+background-color: #f9f9f9;
+}
+
+.vocabulary-table .word-cell {
+font-weight: 600;
+color: #3498db;
+}
+
+/* 짝수 행 배경색 설정 */
+.vocabulary-table tbody tr:nth-child(even) {
+background-color: #f5f7fa;
+}
+
+/* 첫 번째 열(번호) 폭 제한 */
+.vocabulary-table td:first-child {
+width: 50px;
+text-align: center;
+}
+
+/* 액션 버튼 스타일 */
+.action-buttons {
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.action-group {
+background-color: #f5f7fa;
+border-radius: 8px;
+padding: 15px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.action-group h4 {
+margin-top: 0;
+margin-bottom: 10px;
+color: #333;
+font-size: 16px;
+border-bottom: 1px solid #ddd;
+padding-bottom: 8px;
+}
+
+.button-row {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.button-row .btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+flex: 1;
+min-width: 180px;
+}
+
+.button-row .btn i {
+font-size: 16px;
+}
+
+.button-row .btn-primary {
+background-color: #3498db;
+color: white;
+border: none;
+}
+
+.button-row .btn-secondary {
+background-color: #2ecc71;
+color: white;
+border: none;
+}
+
+.button-row .btn-primary:hover {
+background-color: #217dbb;
+}
+
+.button-row .btn-secondary:hover {
+background-color: #25a25a;
+}
+
+.button-row .btn:disabled {
+opacity: 0.5;
+cursor: not-allowed;
+}
+.vocabulary-table-container {
+margin: 15px 0; /* 좌우 마진 제거 */
+width: 100%; /* max-width 대신 width 100% 사용 */
+overflow-x: auto;
+}
+
+.vocabulary-table {
+width: 100%;
+border-collapse: collapse;
+background-color: white;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+overflow: hidden;
+margin: 0 auto;
+table-layout: fixed; /* 각 열의 너비를 고정합니다 */
+}
+
+.vocabulary-table th,
+.vocabulary-table td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid #e0e0e0;
+}
+
+.vocabulary-table th {
+background-color: #f5f7fa;
+color: #333;
+font-weight: 600;
+font-size: 14px;
+}
+
+
+/* 호버 효과 */
+.vocabulary-table tr:hover {
+background-color: #f1f1f1;
+}
+
+.word-cell {
+font-weight: 600;
+color: #3498db;
+}
+.vocabulary-table-container {
+overflow-x: auto;
+width: 100%;
+margin: 15px 0;
+}
+
+.vocabulary-table {
+width: 100%;
+border-collapse: collapse;
+background-color: white;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+overflow: hidden;
+table-layout: fixed;
+}
+
+.vocabulary-table th,
+.vocabulary-table td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid #e0e0e0;
+}
+
+.vocabulary-table th {
+background-color: #f5f7fa;
+color: #333;
+font-weight: 600;
+font-size: 14px;
+}
+
+/* 각 열의 너비 조정 */
+.vocabulary-table th:nth-child(1),
+.vocabulary-table td:nth-child(1) {
+width: 10%;
+text-align: center;
+}
+
+.vocabulary-table th:nth-child(2),
+.vocabulary-table td:nth-child(2) {
+width: 25%;
+}
+
+.vocabulary-table th:nth-child(3),
+.vocabulary-table td:nth-child(3) {
+width: 25%;
+}
+
+.vocabulary-table th:nth-child(4),
+.vocabulary-table td:nth-child(4) {
+width: 40%;
+}
+
+/* ChatInterface.css에 추가할 스타일 */
+.loading-spinner-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.spinner-small {
+width: 20px;
+height: 20px;
+border: 3px solid rgba(255, 255, 255, 0.3);
+border-radius: 50%;
+border-top-color: #fff;
+animation: spin 1s linear infinite;
+display: inline-block;
+}
+
+/* ChatInterface.css 파일에 추가할 모달 스타일 */
+
+/* 기존 모달 스타일은 유지하고 새로운 심플 모달 스타일 추가 */
+.simple-modal {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+}
+
+.simple-modal-content {
+background-color: #333;
+color: #fff;
+border-radius: 8px;
+width: 90%;
+max-width: 450px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+}
+
+.simple-modal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+border-bottom: 1px solid #444;
+}
+
+.simple-modal-title {
+margin: 0;
+font-size: 18px;
+color: #ff6b6b; /* 빨간색 제목 */
+font-weight: bold;
+}
+
+.simple-modal-close {
+background: none;
+border: none;
+font-size: 24px;
+color: #aaa;
+cursor: pointer;
+padding: 0;
+line-height: 1;
+}
+
+.simple-modal-close:hover {
+color: #fff;
+}
+
+.simple-modal-body {
+padding: 20px;
+}
+
+.simple-modal-body p {
+margin: 0 0 10px;
+line-height: 1.5;
+}
+
+.simple-modal-body p:last-child {
+margin-bottom: 0;
+}
+
+.simple-modal-footer {
+padding: 15px 20px;
+display: flex;
+justify-content: flex-end;
+}
+
+.simple-modal-button {
+padding: 8px 16px;
+border-radius: 20px;
+font-size: 14px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+background-color: #4c7ced;
+color: white;
+}
+
+.simple-modal-button:hover {
+background-color: #3a68d6;
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- 언어 학습 아이콘 - 사람과 로봇 캐릭터 결합 -->
+  <g id="lingEdgeLogo">
+    <!-- 사람 캐릭터 -->
+    <circle cx="70" cy="60" r="40" fill="#F5D0C5" /> <!-- 머리 -->
+    <rect x="30" y="100" width="80" height="80" fill="#6A5ACD" /> <!-- 몸통 -->
+    <circle cx="55" cy="55" r="5" fill="#000000" /> <!-- 왼쪽 눈 -->
+    <circle cx="85" cy="55" r="5" fill="#000000" /> <!-- 오른쪽 눈 -->
+    <path d="M60 70 Q70 80 80 70" stroke="#000000" strokeWidth="3" fill="none" /> <!-- 미소 -->
+    <path d="M40 40 Q70 20 100 40" stroke="#000000" strokeWidth="10" fill="none" /> <!-- 머리카락 -->
+
+    <!-- 로봇 -->
+    <rect x="130" y="80" width="50" height="70" rx="10" fill="#B0E0E6" /> <!-- 로봇 몸체 -->
+    <circle cx="145" cy="100" r="5" fill="#4A4A4A" /> <!-- 로봇 왼쪽 눈 -->
+    <circle cx="165" cy="100" r="5" fill="#4A4A4A" /> <!-- 로봇 오른쪽 눈 -->
+    <rect x="150" y="120" width="10" height="3" fill="#4A4A4A" /> <!-- 로봇 입 -->
+    <line x1="140" y1="150" x2="140" y2="180" stroke="#B0E0E6" strokeWidth="6" /> <!-- 로봇 왼쪽 다리 -->
+    <line x1="170" y1="150" x2="170" y2="180" stroke="#B0E0E6" strokeWidth="6" /> <!-- 로봇 오른쪽 다리 -->
+    
+    <!-- 언어 요소 -->
+    <text x="50" y="160" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="20" font-weight="bold">가A文</text>
+    
+    <!-- 언어 연결 선 -->
+    <path d="M100 120 Q120 120 125 110" stroke="#FFFFFF" strokeWidth="2" strokeDasharray="2,2" />
+  </g>
+</svg>

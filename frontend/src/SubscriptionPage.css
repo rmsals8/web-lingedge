@@ -1,0 +1,310 @@
+.subscription-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 320px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.selected {
+  border-color: #4285f4;
+  box-shadow: 0 8px 15px rgba(66, 133, 244, 0.3);
+}
+
+.plan-card.pro {
+  background: linear-gradient(to bottom right, #fff, #f7f9ff);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #ff5722;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.plan-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #4285f4;
+}
+
+.price span {
+  font-size: 1rem;
+  color: #777;
+  font-weight: normal;
+}
+
+.features {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  padding: 8px 0;
+  color: #555;
+}
+
+.select-plan-button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: white;
+  border: 2px solid #4285f4;
+  border-radius: 5px;
+  color: #4285f4;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-plan-button:hover, 
+.select-plan-button.selected {
+  background-color: #4285f4;
+  color: white;
+}
+
+.payment-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center; /* 중앙 정렬 추가 */
+}
+
+.payment-section h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.selected-plan-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 10px;
+  background: #f5f9ff;
+  border-radius: 5px;
+}
+
+.payment-option {
+  margin-bottom: 2rem;
+  /* 페이팔 버튼 컨테이너 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-option h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.payment-description {
+  margin-bottom: 1.5rem;
+  color: #666;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* 페이팔 버튼 컨테이너 스타일 */
+#paypal-button-container {
+  width: 100%;
+  max-width: 350px; /* 페이팔 버튼 최대 너비 */
+  margin: 0 auto;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #4285f4;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.payment-status {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* 무료 플랜 선택 텍스트 스타일 */
+.plan-selected-text {
+  text-align: center;
+  padding: 12px 0;
+  font-weight: bold;
+  color: #4285f4;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .plan-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+ /* 구독 활성화 상태 관련 스타일 */
+ .subscription-active-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center; /* 이미 center로 되어 있을 수 있음 */
+  max-width: 600px;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 내부 요소 중앙 정렬 */
+  justify-content: center;
+}
+
+.subscription-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 내부 요소 중앙 정렬 */
+  margin-bottom: 1.5rem;
+  width: 100%; /* 전체 너비 사용 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+.status-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem auto; /* 상하좌우 마진 조정 */
+}
+
+.subscription-details {
+  margin: 1.5rem auto; /* 가로 중앙 정렬 */
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%; /* 또는 적절한 너비 */
+  max-width: 400px; /* 최대 너비 제한 */
+  text-align: center; /* 내부 텍스트 중앙 정렬 */
+}
+
+.subscription-details p {
+  text-align: center; /* 내부 텍스트 중앙 정렬 */
+  margin: 0.5rem 0;
+}
+
+.manage-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem auto 0 auto; /* 가로 중앙 정렬 */
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+
+.subscription-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.subscription-container h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+ 
+.manage-button:hover {
+  background-color: #2980b9;
+}
+

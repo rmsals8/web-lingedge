@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #FFFFFF;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  color: #6A5ACD;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #6A5ACD;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border: 2px solid #6A5ACD;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.nav-button:hover {
+  background-color: #6A5ACD;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  background-color: #6A5ACD;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* 퀴즈 메뉴 아이콘 추가 (선택 사항) */
+.nav-button.quizzes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-button.quizzes svg {
+  font-size: 14px;
+}
+
+.login {
+  background-color: transparent;
+  color: #20B2AA;
+  border-color: #20B2AA;
+}
+
+.login:hover {
+  background-color: #20B2AA;
+  color: #FFFFFF;
+}
+
+.signup {
+  background-color: #FF69B4;
+  color: #FFFFFF;
+  border-color: #FF69B4;
+}
+
+.signup:hover {
+  background-color: #FF1493;
+  border-color: #FF1493;
+}
+
+.logout {
+  background-color: #FF6347;
+  color: #FFFFFF;
+  border-color: #FF6347;
+}
+
+.logout:hover {
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #6A5ACD;
+}
+
+/* 페이지 컨테이너 */
+.page-container {
+  width: 100%;
+  min-height: calc(100vh - 60px); /* navbar 높이를 제외한 높이 */
+}
+
+/* 페이지 로딩 컨테이너 */
+.page-loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+}
+
+/* 스피너 스타일 */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(106, 90, 205, 0.2); /* LinguaLeap 색상과 맞추기 */
+  border-top: 5px solid #6A5ACD; /* LinguaLeap 주 색상 */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 드롭다운 메뉴 스타일 */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1000;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #4a5568;
+  transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f7fafc;
+  color: #4a6da7;
+}
+
+.dropdown-item:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-button {
+    margin: 0.5rem;
+  }
+
+  * {
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, opacity 0.3s;
+  }
+}

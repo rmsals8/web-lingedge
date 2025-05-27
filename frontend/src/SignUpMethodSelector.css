@@ -1,0 +1,83 @@
+/* src/SignUpMethodSelector.css */
+.signup-method-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    background-color: #f0f2f5;
+    padding: 20px;
+  }
+  
+  .signup-method-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+  }
+  
+  .signup-method-card h2 {
+    color: #1877f2;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-method-card p {
+    color: #606770;
+    margin-bottom: 2rem;
+  }
+  
+  .method-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .regular-signup-button, 
+  .google-signup-button {
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .regular-signup-button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+  }
+  
+  .regular-signup-button:hover {
+    background-color: #166fe5;
+  }
+  
+  .google-signup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #606770;
+    border: 1px solid #dadce0;
+  }
+  
+  .google-signup-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .google-icon {
+    margin-right: 8px;
+    font-size: 20px;
+  }
+  
+  /* 구글 이메일 정보 스타일 */
+  .google-email-info {
+    background-color: #e8f0fe;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    color: #1877f2;
+    font-size: 14px;
+  }

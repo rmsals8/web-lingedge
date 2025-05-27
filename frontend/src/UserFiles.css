@@ -1,0 +1,256 @@
+.icon-container {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}/* UserFiles.css */
+
+.user-files-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 탭 스타일 */
+.file-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.file-tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.file-tabs button.active {
+  color: #3498db;
+  border-bottom: 3px solid #3498db;
+  font-weight: bold;
+}
+
+/* 파일 목록 스타일 */
+.files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.file-item:hover {
+  background-color: #f0f4f8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-icon {
+  font-size: 24px;
+  color: #3498db;
+  margin-right: 15px;
+}
+
+.file-info {
+  flex-grow: 1;
+}
+
+.file-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.file-date, .file-expiry, .file-size {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+/* 파일 액션 버튼 (다운로드, 삭제) 스타일 */
+.file-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.file-action-button {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 140px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-action-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 14px;
+  gap: 8px;
+  position: relative;
+}
+
+.file-action-button .icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.file-action-button .spinner {
+  animation: spin 1s linear infinite;
+  transform-origin: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.file-action-button span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.file-action-button.download {
+  background-color: #3498db;
+}
+
+.file-action-button.download:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.file-action-button.delete {
+  background-color: #e74c3c;
+}
+
+.file-action-button.delete:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+/* 로딩 스피너 애니메이션 */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 전체 페이지 로딩 스피너 */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  flex-direction: column;
+}
+
+.loading-spinner .spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+.loading-spinner p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* 파일 목록이 비어있을 때 */
+.no-files {
+  text-align: center;
+  padding: 40px 0;
+  color: #777;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* 파일 제한 표시 */
+.file-limits {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.limit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.limit-label {
+  width: 80px;
+  font-weight: bold;
+}
+
+.limit-bar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.limit-progress {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 5px;
+}
+
+.limit-text {
+  width: 40px;
+  text-align: right;
+}
+
+/* 파일 정보 안내 */
+.files-info {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.files-info p {
+  margin: 5px 0;
+}

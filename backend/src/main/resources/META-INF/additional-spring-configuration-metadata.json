@@ -1,0 +1,49 @@
+{
+  "properties": [
+    {
+      "name": "openai.api.tts.url",
+      "type": "java.lang.String",
+      "description": "URL for OpenAI's text-to-speech API"
+    },
+    {
+      "name": "openai.api.url",
+      "type": "java.lang.String",
+      "description": "URL for OpenAI's chat completions API"
+    },
+    {
+      "name": "openai.api.key",
+      "type": "java.lang.String",
+      "description": "API key for OpenAI services"
+    },
+    {
+      "name": "openai.model",
+      "type": "java.lang.String",
+      "description": "OpenAI model to use for chat completions"
+    },
+    {
+      "name": "openaitest.app.jwtSecret",
+      "type": "java.lang.String",
+      "description": "Secret key used for JWT token generation and validation"
+    },
+    {
+      "name": "openaitest.app.jwtExpirationMs",
+      "type": "java.lang.Long",
+      "description": "JWT token expiration time in milliseconds"
+    },
+    {
+      "name": "stripe.api.key",
+      "type": "java.lang.String",
+      "description": "Stripe secret API key"
+    },
+    {
+      "name": "stripe.public.key",
+      "type": "java.lang.String",
+      "description": "Stripe publishable API key"
+    },
+    {
+      "name": "stripe.webhook.secret",
+      "type": "java.lang.String",
+      "description": "Stripe webhook secret for verifying webhook events"
+    }
+  ]
+}
