@@ -1,4 +1,4 @@
-# LingEdge - AI Language Learning Platform 🌟
+![lingedge-v2 drawio (1)](https://github.com/user-attachments/assets/cb949675-8cb4-43b3-9db1-38f9a07f38f5)# LingEdge - AI Language Learning Platform 🌟
 
 **🌍 Language / 언어: [한국어](#korean) | [English](#english)**
 
@@ -28,6 +28,10 @@
 **🚀 [LingEdge 웹사이트 바로가기](http://www.lingedge.com)**
 
 > 실제로 운영 중인 서비스를 체험해보세요! 회원가입 후 모든 기능을 사용할 수 있습니다.
+
+### ✨구조도 
+
+![lingedge-v2 drawio (1)](https://github.com/user-attachments/assets/cea00f7f-a7e7-4d29-9f1a-873482716324)
 
 ### ✨ 주요 기능
 
